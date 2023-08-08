@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Calculadora</title>
+    <style>
+        body {
+            background-color: whitesmoke;
+            color: black;
+            font: normal 18pt Times;
+        }
+        input{
+            width: 200px;
+        }
+        div#Resultado {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Calculadora</h1>
+    <input type="number" name="txt1" id="tx1"> +
+    <input type="number" name="txt2" id="tx2">
+    <input type="button" value="Somar" onclick="somar()">
+    <div id="Resultado">Resultado</div>
+    <script>
+        function somar(){
+            var txt1 = window.document.getElementById('tx1')
+            var txt2 = window.document.getElementById('tx2')
+            var n1 = Number(txt1.value)
+            var n2 = Number(txt2.value)
+            var s = n1 + n2
+            var Resultado = window.document.getElementById('Resultado')
+            Resultado.innerHTML = (`A soma de ${n1} e ${n2} é igual a <strong>${s}</strong>`)
+        }
+    </script>
+</body>
+</html>
